@@ -1,0 +1,31 @@
+<section>
+  <div class="container">
+    <h3 class="alignCenter">Register Here</h3>
+    <form [formGroup]="LoginForm" novalidate>
+      <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" formControlName="email" type="email" />
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          class="form-control"
+          formControlName="password"
+          type="password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-success" (click)="login()">
+        LOGIN
+      </button>
+    </form>
+    <p>
+      Don't you have an account?<a
+        [routerLink]="'/register'"
+        routerLinkActive="active"
+        >REGISTER HERE</a
+      >
+    </p>
+  </div>
+</section>
